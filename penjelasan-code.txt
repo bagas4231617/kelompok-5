@@ -1,0 +1,352 @@
+Bagian HTML
+
+`<!DOCTYPE html>`
+- Fungsi Utama: Menentukan jenis dokumen HTML yang digunakan. Tag `<!DOCTYPE html>` memberitahu browser bahwa dokumen ini menggunakan HTML5.  
+- Cara Kerja: Ini ditempatkan di baris pertama file HTML sebelum tag `<html>`. Browser membacanya untuk memahami standar HTML yang berlaku.  
+- Efek Visual/Fungsional: Tidak menampilkan konten apa pun pada halaman; ini hanya pengaturan awal agar halaman ditampilkan sesuai standar HTML5.
+
+`<html lang="id">`
+- Fungsi Utama: Tag pembuka dokumen HTML; atribut `lang="id"` menunjukkan bahwa bahasa konten halaman adalah Bahasa Indonesia.  
+- Cara Kerja: Semua elemen HTML lain berada di dalam tag `<html>`. Atribut `lang` membantu browser dan mesin pencari memahami bahasa dokumen.  
+- Efek Visual/Fungsional: Tidak terlihat di tampilan, tetapi membantu aksesibilitas (misalnya, screen reader mengenali bahasa) dan pengaturan lokal.
+
+`<head>`
+- Fungsi Utama: Bagian kepala dokumen yang berisi informasi meta (judul halaman, link CSS, dll.) yang tidak langsung terlihat di halaman.  
+- Cara Kerja: Browser membaca konten `<head>` untuk memuat resource dan metadata sebelum menampilkan konten pada `<body>`.  
+- Efek Visual/Fungsional: Menyediakan informasi penting (judul tab browser, menghubungkan file CSS, font, dsb.) yang diperlukan halaman, tetapi tidak muncul langsung di halaman web.
+
+`<meta charset="UTF-8">`
+- Fungsi Utama: Menentukan pengkodean karakter yang digunakan dokumen (UTF-8).  
+- Cara Kerja: Ditempatkan di `<head>` agar browser tahu cara menampilkan karakter (huruf, simbol, dsb.) dengan benar.  
+- Efek Visual/Fungsional: Mencegah masalah tampilan karakter (misalnya, huruf Indonesia/Simbol) agar teks tampil dengan benar.
+
+`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+- Fungsi Utama: Mengatur cara halaman ditampilkan pada perangkat dengan ukuran layar berbeda (responsif).  
+- Cara Kerja: `width=device-width` membuat lebar halaman sama dengan lebar layar perangkat. `initial-scale=1.0` mengatur skala awal zoom.  
+- Efek Visual/Fungsional: Halaman bisa menyesuaikan tampilan di ponsel atau tablet, sehingga tidak terlalu kecil/terlalu besar saat pertama kali dibuka.
+
+`<title>Kelompok 5 - Profil Kelompok</title>`
+- Fungsi Utama: Menetapkan judul halaman yang muncul di tab browser.  
+- Cara Kerja: Browser menampilkan teks ini di judul tab atau bookmark halaman.  
+- Efek Visual/Fungsional: Muncul di tab browser sebagai nama halaman; memudahkan pengguna mengetahui konten halaman saat banyak tab terbuka. 
+
+`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/.../css/all.min.css">`
+- Fungsi Utama: Menghubungkan stylesheet eksternal untuk Font Awesome (ikon).  
+- Cara Kerja: Browser memuat file CSS dari URL tersebut sehingga kita dapat menggunakan ikon (class `fab fa-instagram`, dsb.) di HTML.  
+- Efek Visual/Fungsional: Memungkinkan tampilan ikon sosial (Instagram, TikTok, GitHub, WhatsApp) yang digunakan dalam elemen `<i>`; tanpa ini, ikon tidak akan tampil.
+
+`<link rel="stylesheet" href="style.css">`
+- Fungsi Utama: Menghubungkan file CSS lokal (`style.css`) yang berisi aturan gaya halaman.  
+- Cara Kerja: Browser mengambil `style.css` untuk menerapkan gaya (warna, tata letak, font, dsb.) ke elemen HTML.  
+- Efek Visual/Fungsional: Mendefinisikan tampilan visual seluruh halaman (layout, warna, efek hover, dsb.).
+
+`<body>`
+- Fungsi Utama: Bagian isi halaman web yang terlihat oleh pengguna. Semua konten (teks, gambar, struktur utama) ada di dalam `<body>`.  
+- Cara Kerja: Setelah browser membaca `<head>`, ia menampilkan elemen di `<body>` sesuai dengan urutan kode HTML.  
+- Efek Visual/Fungsional: Menampung header, section, footer, dan elemen konten lain sehingga akan ditampilkan di jendela browser.
+
+`<header>`
+- Fungsi Utama: Bagian pembuka (header) halaman yang biasanya berisi judul atau informasi pengenalan.  
+- Cara Kerja: Dalam `<body>`, tag `<header>` membungkus konten utama di bagian atas halaman. Di sini terdapat judul "Kelompok 5" dan paragraf pengantar.  
+- Efek Visual/Fungsional: Menciptakan area atas halaman dengan tampilan khusus (background gradien, teks berwarna putih) seperti disesuaikan di CSS `header`. Mengelompokkan elemen penting di bagian atas.
+
+`<div class="header-content container">`
+- Fungsi Utama: Elemen pembungkus yang berfungsi sebagai wadah konten header. Kelas `container` biasanya untuk menetapkan lebar dan posisi tengah, sedangkan `header-content` mengelompokkan isi header khusus (judul dan subjudul).  
+- Cara Kerja: `div` ini berada di dalam `<header>` untuk mengatur tata letak konten di dalam header. Kelas ini dihubungkan dengan gaya di CSS untuk penempatan (misalnya dengan `.container`).  
+- Efek Visual/Fungsional: Memastikan konten header (teks) memiliki lebar maksimum tertentu dan rata tengah di halaman, menjaga jarak dari tepi layar.
+
+`<h1>Kelompok 5</h1>`
+- Fungsi Utama: Tag judul tingkat pertama (heading). Menampilkan teks "Kelompok 5" sebagai judul utama halaman.  
+- Cara Kerja: Teks ini berada di dalam elemen dengan kelas `header-content`. CSS `h1` mengatur ukuran font dan margin, menjadikannya besar dan mencolok.  
+- Efek Visual/Fungsional: Muncul sebagai teks besar di bagian atas halaman (besar 3rem, tebal) dengan warna putih (ditentukan di `header`). Fungsi semantik: menunjukkan topik utama halaman.
+
+`<p class="subtitle">Selamat datang di website kami... XI.1</p>`
+- Fungsi Utama: Menampilkan paragraf pengantar atau subjudul dengan teks sambutan. Kelas `subtitle` menandakan gaya khusus untuk teks pendukung judul.  
+- Cara Kerja: Diletakkan di bawah `<h1>` dalam header. Gaya `.subtitle` di CSS mengatur ukuran font lebih kecil, kecerahan (opacity), dan lebar maksimal.  
+- Efek Visual/Fungsional: Teks pengantar muncul di bawah judul besar. Gaya CSS membuat teks agak pudar (opacity 0.9) dan lebarnya dibatasi 700px sehingga rapi; disejajarkan di tengah.
+
+`<section class="kelompok-section">`
+- Fungsi Utama: Bagian (section) utama halaman yang mengelompokkan konten tentang anggota kelompok. Kelas `kelompok-section` menandakan ini adalah bagian khusus.  
+- Cara Kerja: Di bawah header, elemen ini memisahkan bagian konten berkaitan dengan profil anggota. CSS `.kelompok-section` memberikan padding atas-bawah untuk ruang.  
+- Efek Visual/Fungsional: Memberikan jarak atas dan bawah (padding 80px) sehingga konten section tidak terlalu menempel ke bagian lain; membantu struktur visual halaman menjadi jelas.
+
+`<div class="container">` (dalam section)
+- Fungsi Utama: Wadah dengan kelas `container` untuk menentukan lebar maksimal konten section dan menempatkannya ke tengah.  
+- Cara Kerja: Mengelilingi semua konten di dalam section (judul section dan grid anggota). Kelas `.container` di CSS mengatur lebar (max-width 1200px) dan margin tengah.  
+- Efek Visual/Fungsional: Konten section (judul dan kartu anggota) dibatasi lebar maksimumnya dan dipusatkan, agar tidak melebar terlalu luas pada layar besar.
+
+`<div class="section-title"><h2>Anggota Kelompok Kami</h2></div>`
+- Fungsi Utama: Pembungkus judul kecil untuk section, dengan teks "Anggota Kelompok Kami". Kelas `section-title` menandakan konten judul section.  
+- Cara Kerja: Tag `<h2>` berada di dalam div ini. CSS `.section-title` mengatur penempatan tengah dan margin bawah. Ada juga pseudo-element `::after` di CSS untuk membuat garis bawah dekoratif di bawah judul.  
+- Efek Visual/Fungsional: Teks judul muncul ditengah dengan ukuran 2.2rem berwarna var(--primary). Gaya `::after` menciptakan garis horizontal berwarna sekunder di bawah teks judul (pembentukan elemen dekorasi), memberikan tampilan menarik.
+
+`<div class="kelompok-grid">`
+- Fungsi Utama: Wadah yang menggunakan layout grid untuk menampilkan anggota kelompok dalam beberapa kolom. Kelas `kelompok-grid` menunjukkan area grid.  
+- Cara Kerja: Di CSS, `.kelompok-grid` diset `display: grid` dengan `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))`. Ini membuat kolom sebanyak mungkin yang lebar minimal 250px dan sebanyak baris diperlukan, serta memberi jarak (gap 30px) antar elemen.  
+- Efek Visual/Fungsional: Anggota kelompok ditata secara grid responsif. Pada layar lebar, beberapa anggota tampil berdampingan; pada layar lebih sempit, kolom otomatis menyesuaikan. Terdapat jarak antar kartu (30px), memberi tampilan teratur.
+
+Anggota Kelompok (Contoh Kelas `.kelompok-member` dan elemen di dalamnya)
+
+Setiap anggota kelompok ditampilkan dalam struktur HTML yang sama. Kita bahas satu per satu:
+
+- `<div class="kelompok-member">`  
+  - Fungsi Utama: Wadah untuk satu kartu profil anggota. Kelas `kelompok-member` menandakan setiap kotak anggota.  
+  - Cara Kerja: Merupakan elemen grid item di dalam `.kelompok-grid`. CSS `kelompok-member` mengatur tampilan kotak (background putih, bayangan, dll).  
+  - Efek Visual/Fungsional: Muncul sebagai kartu persegi dengan background putih, sudut melengkung, dan bayangan lembut di bawahnya. Saat kursor di atas (`:hover`), kartu mengangkat sedikit (terjemahan ke atas) dan bayangan menjadi lebih gelap (untuk efek interaktif).
+
+- `<div class="member-image">`  
+  - Fungsi Utama: Kontainer untuk gambar anggota.  
+  - Cara Kerja: Di dalam `kelompok-member`, elemen ini membatasi tinggi gambar (250px) dan menyembunyikan bagian yang melampaui (overflow: hidden). Posisi diatur relatif untuk memfasilitasi efek.  
+  - Efek Visual/Fungsional: Gambar anggota tampil sesuai wadah. Karena `overflow: hidden`, bila gambar diperbesar (dari efek hover), bagian yang keluar dari kotak tidak terlihat, menghasilkan zoom in pada area tengah gambar.
+
+- `<img src="..." alt="...">`  
+  - Fungsi Utama: Menampilkan foto anggota. Atribut `src` menunjukkan sumber gambar (file lokal atau URL), `alt` memberikan teks alternatif.  
+  - Cara Kerja: Di CSS, `.member-image img` diatur memenuhi kontainer (`width:100%; height:100%`) dan `object-fit: cover` untuk memastikan proporsi tetap. Ada transisi transform 0.5s.  
+  - Efek Visual/Fungsional: Foto tampil memenuhi area kotak tanpa merubah aspek rasio. Saat kartu (`.kelompok-member`) dihover, gambar diperbesar 1.1 kali (scale 1.1) memberikan efek zoom halus.
+
+- `<div class="member-info">`  
+  - Fungsi Utama: Wadah yang berisi informasi teks tentang anggota (nama, peran, bio, dan link sosial).  
+  - Cara Kerja: Terletak di bawah gambar dalam kartu. CSS `.member-info` memberi padding agar teks tidak menempel di tepi.  
+  - Efek Visual/Fungsional: Menyediakan ruang putih di sekitar teks sehingga tampilan rapi. Berisi teks berpusat karena `.kelompok-member` memiliki `text-align: center`.
+
+- `<h3 class="member-name">Nama Anggota</h3>`  
+  - Fungsi Utama: Menampilkan nama anggota sebagai subjudul kartu (tingkat 3).  
+  - Cara Kerja: CSS `.member-name` membuat teks lebih besar (1.4rem) dan memberi warna utama (`var(--primary)`).  
+  - Efek Visual/Fungsional: Nama anggota ditampilkan dengan ukuran cukup besar dan tebal, menarik perhatian sebagai identitas utama anggota pada kartu.
+
+- `<span class="member-role">Anggota X</span>`  
+  - Fungsi Utama: Menampilkan peran anggota (contoh: "Anggota 1").  
+  - Cara Kerja: Elemen `span` dengan kelas `.member-role`. CSS mengatur warnanya (`var(--secondary)`), berat huruf (bold-ish), dan membuatnya blok sehingga muncul di baris sendiri.  
+  - Efek Visual/Fungsional: Menampilkan teks peran dengan warna berbeda (biru muda) di bawah nama, menekankan peran atau urutan anggota.
+
+- `<p class="member-bio">Deskripsi singkat.</p>`  
+  - Fungsi Utama: Paragraf singkat tentang hobi/karakteristik anggota.  
+  - Cara Kerja: CSS `.member-bio` membuat warna teks abu-abu (`var(--text-light)`) dan sedikit font lebih kecil (0.95rem).  
+  - Efek Visual/Fungsional: Muncul sebagai kalimat kecil di bawah peran, berwarna abu-abu tua, menambah informasi tanpa terlalu menonjol.
+
+- `<div class="social-links">`  
+  - Fungsi Utama: Menampung tautan ke media sosial atau kontak anggota.  
+  - Cara Kerja: Elemen ini menggunakan CSS Flexbox (`display: flex; justify-content: center;`) untuk meratakan ikon dalam satu baris di tengah. Terdapat jarak antar ikon (gap 15px).  
+  - Efek Visual/Fungsional: Ikon sosial (Instagram, TikTok, GitHub/WhatsApp) tampil berjajar rapi di tengah bawah kartu.
+
+- `<a href="#"><i class="fab fa-instagram"></i></a>` (dan sejenisnya)  
+  - Fungsi Utama: Tautan ke profil atau kontak media sosial anggota. Tag `<i>` dengan kelas Font Awesome (`fab fa-instagram`, `fa-tiktok`, dsb.) menampilkan ikon terkait.  
+  - Cara Kerja: `<a>` dibungkus class `.social-links a` dalam CSS. Masing-masing ditata menjadi lingkaran kecil (35x35px) dengan latar belakang terang dan ikon di dalamnya. Ada transisi saat hover.  
+  - Efek Visual/Fungsional: Menampilkan ikon media sosial dalam lingkar kecil. Saat kursor diarahkan ke ikon, background berubah warna (ke var(--secondary)) dan ikon menjadi putih, plus ikon sedikit naik (translateY(-3px)), memberikan efek interaktif.
+
+(Catatan: Struktur di atas diulang untuk setiap anggota (Anggota 1 sampai Anggota 4). Kontennya berbeda (nama, bio, gambar), namun struktur HTML dan kelasnya sama.)
+
+`<footer>`
+- Fungsi Utama: Bagian bawah halaman yang biasanya berisi informasi hak cipta atau logo.  
+- Cara Kerja: Diletakkan setelah semua konten section. Tag `<footer>` membungkus konten footer.  
+- Efek Visual/Fungsional: Terlihat di bagian paling bawah. CSS `footer` memberi latar belakang gelap (var(--dark)) dan teks putih, serta padding atas-bawah 30px, membuat bagian ini konsisten dengan tema warna.
+
+`<div class="container">` (dalam footer)
+- Fungsi Utama: Wadah dalam footer untuk mengatur lebar konten dan rata tengah, menggunakan kembali kelas umum `container`.  
+- Cara Kerja: Mengelilingi isi footer (logo dan hak cipta). Kelas `.container` sama seperti sebelumnya menetapkan max-width dan margin tengah.  
+- Efek Visual/Fungsional: Konten footer (logo teks dan copyright) dibatasi lebar maksimumnya dan muncul di tengah halaman.
+
+`<div class="footer-content">`
+- Fungsi Utama: Pembungkus internal dalam footer untuk penataan konten.  
+- Cara Kerja: Di CSS, `.footer-content` diatur `display: flex; flex-direction: column; align-items: center`, sehingga elemen di dalamnya (logo, paragraf) disusun vertikal dan rata tengah.  
+- Efek Visual/Fungsional: Logo "Kelompok 5" dan teks hak cipta akan muncul sejajar kolom di tengah, dengan logo di atas dan teks hak cipta di bawah secara terpusat.
+
+`<div class="footer-logo">Kelompok 5</div>`
+- Fungsi Utama: Menampilkan nama/logo kelompok di footer.  
+- Cara Kerja: Elemen `div` dengan kelas `.footer-logo`. CSS mengatur ukuran font menjadi 1.5rem tebal dan warna `var(--light)` (putih keabu-abuan).  
+- Efek Visual/Fungsional: Teks "Kelompok 5" muncul lebih besar dan tebal di atas footer, mencolok dan membedakan dari teks biasa. Menyajikan nama kelompok sebagai logo sederhana.
+
+<div class="border-box">Beri Nilai</div>
+Fungsi Utama: Menampilkan sebuah elemen seperti tombol atau label di bagian footer dengan teks “Beri Nilai”. Ini berperan sebagai panggilan aksi (call-to-action) yang mengajak pengunjung memberi nilai atau umpan balik.
+Cara Kerja: Elemen <div> ini diletakkan di dalam footer-content bersama elemen-elemen lain (logo dan teks hak cipta). Kelas border-box menghubungkannya dengan aturan gaya CSS khusus untuk membuatnya tampak seperti tombol.
+Efek Visual/Fungsional: Teks “Beri Nilai” muncul sebagai kotak kecil berwarna biru muda di bawah logo footer. Meskipun berupa <div>, tampilannya menyerupai tombol interaktif karena gaya CSS yang diterapkan, dan posisinya terpusat di dalam footer berkat tata letak flex di .footer-content.
+
+`<p class="copyright">&copy; 2025 Kelompok 5. Semua hak dilindungi.</p>`
+- Fungsi Utama: Menampilkan informasi hak cipta.  
+- Cara Kerja: CSS `.copyright` memberi ukuran font kecil (0.9rem) dan opacity 0.7.  
+- Efek Visual/Fungsional: Teks hak cipta muncul di bagian bawah footer, berukuran kecil dan agak pudar (opacity rendah), memberikan informasi legal tanpa menonjol terlalu banyak.
+
+Bagian CSS
+
+`:root`
+- Fungsi Utama: Mendefinisikan variabel CSS global (warna dan teks) yang dapat digunakan di seluruh stylesheet.  
+- Cara Kerja: Di CSS, `:root` adalah selektor yang mewakili elemen `<html>`. Baris `--primary: #2c3e50;` dan sejenisnya menetapkan variabel seperti `var(--primary)`.  
+- Efek Visual/Fungsional: Variabel memudahkan penggunaan warna konsisten. Misalnya, `var(--primary)` (biru kehitaman) digunakan di banyak tempat (header, teks nama). Jika ingin mengubah tema warna, cukup ubah di `:root`.
+
+``
+- Fungsi Utama: Selektor universal yang memilih semua elemen HTML.  
+- Cara Kerja: Kode ` { margin: 0; padding: 0; box-sizing: border-box; font-family: ... }` mengatur ulang gaya default browser. `margin: 0; padding: 0;` menghilangkan jarak default. `box-sizing: border-box;` membuat ukuran elemen dihitung termasuk border dan padding.  
+- Efek Visual/Fungsional: Menghilangkan margin dan padding bawaan (memastikan konsistensi desain). Menetapkan font default ke 'Segoe UI' dsb. Sehingga semua teks di halaman menggunakan font tersebut, memberikan tampilan uniform.
+
+`body`
+- Fungsi Utama: Mengatur gaya dasar untuk keseluruhan halaman.  
+- Cara Kerja: CSS `body { background-color: #f9f9f9; color: var(--text); line-height: 1.6; }`.  
+- Efek Visual/Fungsional: Latar belakang halaman menjadi warna abu-abu terang (#f9f9f9). Warna teks default (`var(--text)`) abu tua #333. `line-height: 1.6` membuat spasi antar baris teks lebih nyaman dibaca. Efeknya halaman tampak rapi, netral, dan mudah dibaca.
+
+`.container`
+- Fungsi Utama: Kelas untuk membatasi lebar konten dan memusatkannya.  
+- Cara Kerja: `max-width: 1200px; margin: 0 auto; padding: 0 20px;`. `max-width` memastikan lebar maksimal 1200px, `margin: 0 auto` memposisikan di tengah horizontal, `padding: 0 20px` memberi ruang kiri-kanan.  
+- Efek Visual/Fungsional: Konten dalam `.container` tidak melebar terlalu lebar pada layar besar dan selalu berada di tengah layar dengan jarak samping 20px. Ini membuat tampilan halaman enak dilihat.
+
+`header`
+- Fungsi Utama: Mengatur gaya bagian header atas halaman.  
+- Cara Kerja: `background: linear-gradient(135deg, var(--primary), var(--secondary));` memberi latar gradien diagonal dari warna `--primary` ke `--secondary`. `color: white;` menjadikan teks di dalamnya putih. `padding: 60px 0 80px;` memberi ruang atas 60px dan bawah 80px. `text-align: center;` memusatkan teks. `position: relative; overflow: hidden;` mengatur kotak relatif dengan konten tersembunyi jika melewati batas.  
+- Efek Visual/Fungsional: Header tampil dengan latar belakang gradien biru tua ke biru muda. Judul dan subtitle terpusat, berwarna putih. Padding besar membuat area header tinggi. `overflow: hidden` memastikan gambar atau elemen pseudo di dalam tidak keluar area header.
+
+`header::before`
+- Fungsi Utama: Pseudo-elemen yang menambahkan dekorasi gambar di latar header.  
+- Cara Kerja: `content: ''` membuat elemen kosong; `position: absolute; top: 0; left: 0; width:100%; height:100%;` menempatkannya melapisi seluruh header. `background: url('data:image/svg+xml;base64,...')` adalah gambar SVG ter-encode yang berupa pola kotak kecil berwarna putih transparan. `opacity: 0.3;` membuatnya tembus pandang 30%.  
+- Efek Visual/Fungsional: Menambahkan pola halus (kotak kecil diagonally) di atas latar gradien header. Karena opasitas rendah, terlihat seperti efek tekstur halus. Ini membuat background header lebih menarik tanpa menutupi teks (teks di atasnya karena z-index 1).
+
+`.header-content`
+- Fungsi Utama: Mengatur posisi konten dalam header agar berada di atas overlay pseudo-elemen.  
+- Cara Kerja: `position: relative; z-index: 1;` menjadikan konten ini lapisan di atas pseudo-elemen `::before`.  
+- Efek Visual/Fungsional: Isi header (judul dan subtitle) tetap terlihat jelas di depan pola latar karena `z-index: 1`. Tanpa ini, konten mungkin tertutupi oleh pseudo-elemen latar.
+
+`h1`
+- Fungsi Utama: Menata tampilan teks heading utama `<h1>`.  
+- Cara Kerja: `font-size: 3rem;` membuatnya besar. `margin-bottom: 15px;` memberi jarak bawah 15px. `font-weight: 700;` (tebal).  
+- Efek Visual/Fungsional: Judul “Kelompok 5” menjadi sangat besar dan mencolok. Margin bawah memastikan ada ruang sebelum elemen berikutnya (subtitle).
+
+`.subtitle`
+- Fungsi Utama: Menata tampilan teks dengan kelas `.subtitle`.  
+- Cara Kerja: `font-size: 1.2rem;` membuat teks sedikit lebih besar dari normal. `opacity: 0.9;` sedikit memudarkan (90% opacity). `max-width: 700px; margin: 0 auto 30px;` membatasi lebar hingga 700px dan memusatkannya, dengan margin bawah 30px.  
+- Efek Visual/Fungsional: Paragraf sambutan tampil agak pudar dan tidak terlalu lebar, sehingga mudah dibaca. Margin bawah memisahkannya dari konten berikut (bagian anggota) dengan ruang 30px.
+
+`.kelompok-section`
+- Fungsi Utama: Menata section utama kelompok (semua anggota).  
+- Cara Kerja: `padding: 80px 0;` memberi jarak 80px atas dan bawah dalam section.  
+- Efek Visual/Fungsional: Ruang antara section ini dengan elemen di atas dan bawah terlihat cukup lega, membuat tampilan tidak berjejal.
+
+`.section-title`
+- Fungsi Utama: Menata kontainer judul section (kelas `.section-title`).  
+- Cara Kerja: `text-align: center;` memusatkan teks di dalamnya. `margin-bottom: 50px;` menambah jarak bawah. `position: relative;` untuk menempatkan elemen anak pseudo (garis bawah).  
+- Efek Visual/Fungsional: Judul section (h2) berada di tengah halaman dengan jarak bawah yang cukup (50px) sebelum konten berikutnya. Posisi relatif penting agar pseudo-elemen di bawah judul bisa diatur (see next).
+
+`.section-title h2`
+- Fungsi Utama: Menata tampilan teks `<h2>` dalam judul section.  
+- Cara Kerja: `font-size: 2.2rem;` ukuran cukup besar. `color: var(--primary);` memberi warna utama (biru gelap). `display: inline-block;` membuat elemen hanya selebar teksnya. `padding-bottom: 15px;` memberi ruang bawah untuk pseudo-elem `.  
+- Efek Visual/Fungsional: Teks “Anggota Kelompok Kami” menjadi besar dan berwarna biru gelap. Karena `display: inline-block`, lebar elemen sesuai teks, berguna saat membuat garis bawah dekoratif. Padding bawah menambah ruang untuk garis (pseudo-elemen).
+
+`.section-title h2::after`
+- Fungsi Utama: Pseudo-elemen untuk membuat garis dekoratif di bawah judul h2.  
+- Cara Kerja: `content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);` menempatkan garis horizontal di bawah teks, terpusat (left 50% dan translateX -50%). `width: 400px; height: 3px; background: var(--secondary);` membuat kotak panjang 400px, tinggi 3px, berwarna sekunder (biru muda).  
+- Efek Visual/Fungsional: Sebuah garis tipis berwarna biru muda muncul tepat di bawah judul “Anggota Kelompok Kami”. Mengisi ruang horizontal 400px, memberi aksen visual yang menarik dan membatasi area judul.
+
+`.kelompok-grid`
+- Fungsi Utama: Mengatur layout kartu anggota menggunakan CSS Grid.  
+- Cara Kerja: `display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;`. `auto-fit` membuat kolom otomatis menyesuaikan banyaknya dengan lebar minimum 250px tiap kolom. `gap: 30px` memberi jarak antar-kolom dan antar-baris.  
+- Efek Visual/Fungsional: Kartu anggota ditata merata. Pada layar lebar, beberapa kolom tersusun; pada layar sempit (paling sempit satu kolom). Jarak 30px antar kartu membuat tampilan rapi dan tidak saling menempel.
+
+`.kelompok-member`
+- Fungsi Utama: Menata gaya kotak kartu anggota (kelas `.kelompok-member`).  
+- Cara Kerja: `background: white;` membuat latar kotak putih. `border-radius: 10px;` membulatkan sudut. `overflow: hidden;` menyembunyikan bagian konten yang keluar kotak (penting untuk efek gambar zoom). `box-shadow: 0 10px 30px rgba(0,0,0,0.1);` memberi bayangan halus. `transition: transform 0.3s ease, box-shadow 0.3s ease;` mengatur animasi transisi saat efek hover. `text-align: center;` menengah teks di dalam.  
+- Efek Visual/Fungsional: Kartu anggota tampil dengan tampilan bersih: sudut melengkung, bayangan lembut di bawahnya. Ketika pengguna menyorot (hover), properti `transform` dan `box-shadow` akan berubah halus sesuai aturan di `.kelompok-member:hover`.
+
+`.kelompok-member:hover`
+- Fungsi Utama: Menata efek saat kursor berada di atas kartu anggota.  
+- Cara Kerja: `transform: translateY(-10px);` mengangkat kotak 10px ke atas. `box-shadow: 0 15px 35px rgba(0,0,0,0.15);` memperdalam dan memperlebar bayangan.  
+- Efek Visual/Fungsional: Ketika hover, kartu terlihat “terangkat” sedikit dari halaman, menciptakan efek interaktif bahwa kartu aktif. Bayangan yang lebih besar memberi kesan terfokus atau terangkat.
+
+`.member-image`
+- Fungsi Utama: Menata kontainer gambar anggota.  
+- Cara Kerja: `height: 250px;` menetapkan tinggi kotak gambar. `overflow: hidden;` menyembunyikan bagian gambar yang melebihi kotak saat diperbesar. `position: relative;` memberikan konteks posisi bagi gambar (walau di sini hanya diperlukan untuk kemungkinan penyesuaian lebih lanjut).  
+- Efek Visual/Fungsional: Mengunci tinggi gambar pada 250px. Jika gambar lebih besar, bagian tepi yang keluar tidak ditampilkan. Saat transisi hover zoom terjadi, gambar akan memperbesar tapi tidak meluber keluar kotak.
+
+`.member-image img`
+- Fungsi Utama: Menata tag `<img>` dalam kontainer member-image.  
+- Cara Kerja: `width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;`. Ini membuat gambar mengisi seluruh kontainer (`width:100%` & `height:100%`) dan `object-fit: cover` menjaga aspek rasio sambil memotong bagian yang melebihi. `transition` untuk efek transformasi halus.  
+- Efek Visual/Fungsional: Gambar tampak penuh memenuhi area kotak 250x250px, memotong bagian pinggir jika perlu. Saat terjadi hover pada `.kelompok-member`, gambar tersebut membesar (dari aturan berikut) secara halus berkat `transition`.
+
+`.kelompok-member:hover .member-image img`
+- Fungsi Utama: Efek transformasi pada gambar saat kursor hover pada kartu anggota.  
+- Cara Kerja: `transform: scale(1.1);` memperbesar gambar 110%. Aturan ini dipicu ketika `.kelompok-member` dihover, bukan saat langsung hover ke gambar.  
+- Efek Visual/Fungsional: Gambar anggota memberikan efek zoom masuk halus ketika mouse berada di atas kartu. Menambah kesan dinamis dan interaktif.
+
+`.member-info`
+- Fungsi Utama: Menata konten teks di dalam kartu anggota (nama, peran, bio, link sosial).  
+- Cara Kerja: `padding: 25px 20px;` memberi ruang dalam kotak: 25px atas-bawah, 20px kiri-kanan.  
+- Efek Visual/Fungsional: Teks tidak menempel langsung ke tepi kotak, menjaga jarak agar nyaman dibaca dan tampilan lebih bersih.
+
+`.member-name`
+- Fungsi Utama: Menata tampilan nama anggota (`<h3>`).  
+- Cara Kerja: `font-size: 1.4rem; margin-bottom: 5px; color: var(--primary);`.  
+- Efek Visual/Fungsional: Nama anggota menjadi lebih besar dan berwarna biru tua (`var(--primary)`), memberikan penekanan visual pada identitas anggota. Margin bawah kecil memisahkan nama dari elemen di bawahnya.
+
+`.member-role`
+- Fungsi Utama: Menata tampilan peran/urutan anggota (`<span>`).  
+- Cara Kerja: `color: var(--secondary); font-weight: 600; margin-bottom: 15px; display: block;`.  
+- Efek Visual/Fungsional: Teks peran muncul berwarna biru muda (`var(--secondary)`), cukup tebal, dan berada di baris sendiri (karena `display: block`). Ada jarak bawah 15px sebelum bio dimulai.
+
+`.member-bio`
+- Fungsi Utama: Menata teks deskripsi singkat anggota (`<p>`).  
+- Cara Kerja: `color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px;`.  
+- Efek Visual/Fungsional: Bio muncul berwarna abu-abu (lebih terang daripada teks utama) dengan font sedikit lebih kecil. Margin bawah 20px memberi ruang ke ikon sosial di bawahnya.
+
+`.social-links`
+- Fungsi Utama: Menata wadah ikon sosial.  
+- Cara Kerja: `display: flex; justify-content: center; gap: 15px;`.  
+- Efek Visual/Fungsional: Ikon media sosial (link) tersusun berjajar secara horizontal dan terpusat. Jarak antar ikon 15px membuatnya tidak menempel.
+
+`.social-links a`
+- Fungsi Utama: Menata masing-masing tautan ikon sosial.  
+- Cara Kerja: `width: 35px; height: 35px; border-radius: 50%; background: var(--light); color: var(--primary); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;`. Elemen menjadi lingkaran 35px x 35px dengan latar terang, teks (ikon) berwarna biru tua. `display: flex` dan `align-items/justify-content` menengahkan ikon. `transition` membuat perubahan gaya halus.  
+- Efek Visual/Fungsional: Ikon sosial tampil dalam lingkaran kecil berwarna terang dengan ikon di tengah. Karena latar terang dan ikon biru, mudah dilihat. Hover (diatur selanjutnya) memberikan efek interaktif.
+
+`.social-links a:hover`
+- Fungsi Utama: Menata gaya saat kursor berada di atas ikon sosial.  
+- Cara Kerja: `background: var(--secondary); color: white; transform: translateY(-3px);`.  
+- Efek Visual/Fungsional: Saat hover, lingkaran ikon berubah latar menjadi biru muda, ikon menjadi putih, dan ikon sedikit naik (terangkat 3px). Memberikan umpan balik visual yang menarik saat pengguna mengeklik atau menyorot ikon.
+
+`footer`
+- Fungsi Utama: Menata gaya dasar untuk bagian footer.  
+- Cara Kerja: `background: var(--dark); color: white; padding: 30px 0; text-align: center;`.  
+- Efek Visual/Fungsional: Footer memiliki latar belakang gelap (biru tua), teks putih, dengan 30px ruang atas dan bawah. Semua teks di footer terpusat secara horizontal.
+
+`.footer-content`
+- Fungsi Utama: Menata konten di dalam footer.  
+- Cara Kerja: `display: flex; flex-direction: column; align-items: center;`.  
+- Efek Visual/Fungsional: Elemen di dalam `.footer-content` (logo dan copyright) disusun vertikal dan rata tengah.
+
+`.footer-logo`
+- Fungsi Utama: Menata tampilan teks logo di footer.  
+- Cara Kerja: `font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; color: var(--light);`.  
+- Efek Visual/Fungsional: Teks "Kelompok 5" di footer muncul lebih besar dan tebal, berwarna abu-abu muda (var(--light)), menonjol di atas teks hak cipta.
+
+.border-box
+Fungsi Utama: Menata elemen dengan kelas .border-box (yaitu kotak “Beri Nilai”) agar tampil seperti tombol.
+Cara Kerja: Beberapa properti CSS diterapkan: display: inline-block; membuat elemen menjadi blok sebaris, padding: 5px 10px; memberi ruang di dalamnya, background: var(--secondary); memberi warna latar biru muda, border-radius: .6rem; membulatkan sudut, dan box-shadow: 0 .2rem .5rem var(--text-light); memberikan bayangan halus. font-size: 1.2rem; color: var(--light); font-weight: 600; mengatur ukuran dan warna teks putih yang tebal. border: .2rem solid transparent; menyiapkan bingkai transparan saat hover, letter-spacing: .1rem; memberi jarak antar-huruf, dan margin-bottom: 1.5rem; memberi jarak bawah sebelum elemen berikut. transition: .5s ease; memastikan perubahan gaya berjalan halus.
+Efek Visual/Fungsional: Elemen .border-box tampil sebagai tombol kecil berwarna biru muda dengan teks putih di dalamnya. Sudutnya bulat dan ada bayangan lembut di sekelilingnya, memberi kesan seperti tombol melayang. Teks cukup besar dan tebal sehingga mudah dibaca. Efek ini menarik perhatian pengguna untuk berinteraksi.
+
+.border-box:hover
+Fungsi Utama: Menata tampilan elemen .border-box saat kursor diarahkan (hover), untuk memberi umpan balik interaktif.
+Cara Kerja: Aturan CSS ini mengubah gaya saat hover: background: transparent; membuat latar belakang menjadi transparan, border-color: var(--light); mengubah warna border menjadi putih, dan color: var(--light); memastikan teks tetap putih. Karena transition: .5s ease; telah diatur pada .border-box, perubahan gaya ini terjadi secara halus.
+Efek Visual/Fungsional: Ketika pengguna menyorot tombol “Beri Nilai” dengan kursor, latar belakang biru muda menghilang dan muncul garis tepi putih di sekelilingnya, sementara teks tetap putih. Efek ini membuat tombol terlihat seperti “ghost button” (tombol transparan dengan bingkai putih), memberikan indikasi visual bahwa elemen tersebut aktif dan siap di-klik.
+
+`.copyright`
+- Fungsi Utama: Menata teks hak cipta di footer.  
+- Cara Kerja: `font-size: 0.9rem; opacity: 0.7;`.  
+- Efek Visual/Fungsional: Teks hak cipta berukuran lebih kecil dan agak tembus pandang (opacity 0.7), sehingga tampil lebih halus dan tidak terlalu mencolok.
+
+`@media (max-width: 768px)`
+- Fungsi Utama: Aturan responsive untuk layar lebar maksimum 768px (umumnya tablet atau ponsel).  
+- Cara Kerja: Blok CSS dalam media query ini hanya berlaku jika lebar viewport ≤768px.  
+  - `h1 { font-size: 2.2rem; }`: Mengurangi ukuran font `<h1>` untuk layar kecil.  
+  - `.subtitle { font-size: 1rem; }`: Mengurangi ukuran font paragraf subtitle.  
+  - `.kelompok-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }`: Mengubah grid menjadi satu kolom (`1fr` saja) dan memperkecil lebar maksimum 400px serta menyesuaikan margin tengah.  
+- Efek Visual/Fungsional: Pada layar kecil, judul dan subtitle tidak terlalu besar sehingga tidak melebar keluar layar. Kartu anggota ditampilkan satu per baris dengan lebar maksimal 400px, memudahkan pengguliran vertikal dan tampilan lebih nyaman di ponsel.
+
+`::-webkit-scrollbar`, `::-webkit-scrollbar-track`, `::-webkit-scrollbar-thumb`, `::-webkit-scrollbar-thumb:hover`
+- Fungsi Utama: Menata tampilan scrollbar khusus di browser berbasis WebKit (Chrome, Safari).  
+- Cara Kerja: Pseudo-elemen ini target bagian scrollbar:  
+  - `::-webkit-scrollbar { width: 12px; height: 12px; }`: Menentukan lebar (vertikal) dan tinggi (horizontal) scrollbar 12px.  
+  - `::-webkit-scrollbar-track { background: var(--light); }`: Latar belakang lintasan scrollbar berwarna terang (putih keabu-abuan).  
+  - `::-webkit-scrollbar-thumb { background-color: var(--primary); border-radius: 10px; border: 3px solid var(--light); }`: Gagang scrollbar (thumb) berwarna biru tua, berbentuk bulat ujungnya (radius 10px), dengan border putih untuk memberikan ruang di antara track.  
+  - `::-webkit-scrollbar-thumb:hover { background-color: var(--secondary); }`: Saat kursor di atas thumb, warnanya berubah biru muda.  
+- Efek Visual/Fungsional: Scrollbar menjadi lebih estetis dan sesuai tema situs: lebar sedikit lebih tebal (12px), track berwarna terang, thumb berwarna utama, thumb berubah warna saat hover. Menambah pengalaman visual dan konsistensi desain.
+
+` { scrollbar-width: thin; scrollbar-color: var(--primary) var(--light); }`
+- Fungsi Utama: Menata scrollbar di browser non-WebKit (misalnya Firefox).  
+- Cara Kerja: `scrollbar-width: thin;` membuat scrollbar lebih tipis. `scrollbar-color: var(--primary) var(--light);` menetapkan warna thumb (var(--primary)) dan track (var(--light)). Selector `` (universal) memastikan aturan ini diterapkan secara umum.  
+- Efek Visual/Fungsional: Scrollbar di Firefox dan browser yang mendukung standar ini menjadi ramping dengan warna senada (thumb biru, track terang), menjaga konsistensi tampilan scrollbar di berbagai browser.
+
